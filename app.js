@@ -1,23 +1,27 @@
+/*This will check if a credit card numbers is valid, according
+to the Luhn Algorithm */
 function isValidCard(numbers) {
 
     do {
         numbers = prompt("Por favor, ingrese el número de su tarjeta de crédito, sin espacios.");
+        // If the person ignore this warning, the number will be considered invalid
         if (numbers !== "" && numbers !== " ") {
-            var arr = numbers.split("");
+            var arr = numbers.split(""); //The input will be a string, so this converts it into an array
         } else {
             alert("Ingrese un número válido ¬¬");
         }
     } while (numbers === "" || numbers === " ");
 
 
-    var arrReverse = arr.reverse(); 
-    var arrOfNumbers = [];
-    var sumOdds = 0;
-    var even = [];
-    var evenPerTwo = [];
-    var singlefy = [];
-    var evenFinal = 0;
-    var check = "";
+    var arrReverse = arr.reverse(); //Will contain the array in reverse
+    var arrOfNumbers = []; /*So far, the numbers are on an array, but each one is typeof string. 
+    This will contain each digit typeof number.*/
+    var sumOdds = 0; //It'll sum numbers at odd positions
+    var even = []; //It'll contain numbers at even positions
+    var evenPerTwo = []; //It'll contain numbers at even positions multiplied per two
+    var singlefy = []; //It'll contain numbers smaller than nine.
+    var evenFinal = 0; //It'll will sum numbers at even positions
+    var check = ""; //It'll contain the final result.
 
     for (var i = 0; i < arrReverse.length; i++) {
         arrOfNumbers.push(parseInt(arrReverse[i]));
@@ -25,7 +29,7 @@ function isValidCard(numbers) {
 
 
     for (var a = 0; a < arrOfNumbers.length; a++) {
-        if (a % 2 === 0) {
+        if (a % 2 === 0) { //Positions in JS are "reversed", so the even positions are the odd positions.
             sumOdds += arrOfNumbers[a];
         } else if (a % 2 !== 0) {
             even.push(arrOfNumbers[a]);
