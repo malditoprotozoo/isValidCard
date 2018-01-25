@@ -1,0 +1,25 @@
+{
+  "name": "isvalidcard",
+  "version": "1.0.0",
+  "description": "Credit card validator",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/malditoprotozoo/isValidCard.git"
+  },
+  "keywords": [
+    "credit",
+    "card",
+    "validator",
+    "validate"
+  ],
+  "author": "Victoria Rodríguez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/malditoprotozoo/isValidCard/issues"
+  },
+  "homepage": "https://github.com/malditoprotozoo/isValidCard#readme"
+}
