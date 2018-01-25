@@ -1,5 +1,7 @@
-/* This will check if a credit card numbers is valid, according
-to the Luhn Algorithm */
+/**
+* This will check if a credit card numbers is valid, according
+* to the Luhn Algorithm
+*/
 
 function isValidCard(numbers) {
   do {
